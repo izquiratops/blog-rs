@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <title>Jordi Izquierdo</title>
+</head>
+
+<body>
+  <h1>Jordi Izquierdo</h1>
+  <p>Hey! here I talk about who I am and what I do</p>
+  <h3>Recent posts</h3>
+  <ul>
+    {% for article_data in article_data_list %}
+    <li class="post-title">
+      <a href="/blog/{{article_data.file_name}}">{{article_data.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
